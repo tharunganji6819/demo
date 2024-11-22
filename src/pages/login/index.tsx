@@ -42,8 +42,8 @@ export default function Login() {
       body: JSON.stringify(formDetails),
     };
     const response = await fetch(url, options);
+    if (response.ok === false) return alert("Invalid Credentials");
     const data = await response.json();
-    console.log(data);
     Cookies.set("token", data.token);
     router.replace("/");
   };
