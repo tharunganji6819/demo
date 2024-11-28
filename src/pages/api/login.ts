@@ -29,5 +29,5 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
     }
     return res.status(400).json({ message: "User not found" });
   }
-  return res.status(400).json({ message: "Method not allowed" });
+  return res.status(400).json({ message: "Invalid Method" });
 }
