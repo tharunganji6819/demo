@@ -11,7 +11,7 @@ type Details = {
   password: string;
 };
 
-export default async function login(req: NextApiRequest, res: NextApiResponse) {
+export default async function register(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const { username, email, password }: Details = req.body;
     const findUser = await User.findOne({ username });
